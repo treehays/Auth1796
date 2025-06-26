@@ -15,6 +15,7 @@ A robust, modular, and secure RESTful API built with .NET 8 and ASP.NET Core, de
 - [Contributing](#contributing)
 - [License](#license)
 - [Author / Contact](#author--contact)
+- [AI Assistance](#ai-assistance)
 
 ---
 
@@ -152,6 +153,12 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 - **Author:** Ahmad Abdulsalam
 - **Contact:** Please open an issue or pull request on the repository for questions or support.
+
+---
+
+## 🤖 AI Assistance
+
+This project was developed with the help of agentic AI using **Kilocode** together with **GitHub Copilot** to boost productivity, automate code generation, and ensure best practices throughout the codebase.
 
 ---
 
