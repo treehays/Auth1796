@@ -8,13 +8,20 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Auth1796.Core.Application.Services.UserManagement.Implementation;
-internal class UserManagementService(UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager, IUserRepository userRepository, IUnitOfWork unitOfWork) : IUserManagementService
+public class UserManagementService : IUserManagementService
 {
-    private readonly UserManager<ApplicationUser> _userManager = userManager;
-    private readonly RoleManager<ApplicationRole> _roleManager = roleManager;
+    private readonly UserManager<ApplicationUser> _userManager;
+    private readonly RoleManager<ApplicationRole> _roleManager;
+    private readonly IUserRepository _userRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IUnitOfWork _unitOfWork = unitOfWork;
+    public UserManagementService(UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager, IUserRepository userRepository, IUnitOfWork unitOfWork)
+    {
+        _userManager = userManager;
+        _roleManager = roleManager;
+        _userRepository = userRepository;
+        _unitOfWork = unitOfWork;
+    }
 
     public async Task<IResult<bool>> RegisterUserAsync(CreateUserRequest request, CancellationToken cancellationToken)
     {
