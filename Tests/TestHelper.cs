@@ -1,4 +1,5 @@
 using Auth1796.Core.Application.DTOs.UserManagmentDTO;
+using Auth1796.Core.Domain.Entities;
 
 namespace Auth1796.Tests;
 
